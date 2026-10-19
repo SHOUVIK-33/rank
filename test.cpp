@@ -1,7 +1,7 @@
 #include <cassert>
 #include <iostream>
-#include "../src/database.hpp"
-#include "../src/rank.hpp"
+#include "database.hpp"
+#include "rank.hpp"
 
 int main() {
     assert(rankOfWord("abcd") == 1);
