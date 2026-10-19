@@ -3,12 +3,12 @@ CXXFLAGS = -std=c++17 -O2 -Wall
 
 all: wordrank
 
-wordrank: src/main.cpp src/rank.hpp src/database.hpp
-	$(CXX) $(CXXFLAGS) src/main.cpp -o wordrank
+wordrank: main.cpp rank.hpp database.hpp
+	$(CXX) $(CXXFLAGS) main.cpp -o wordrank
 
-test: tests/test.cpp src/rank.hpp src/database.hpp
-	$(CXX) $(CXXFLAGS) tests/test.cpp -o run_tests
+test: test.cpp rank.hpp database.hpp
+	$(CXX) $(CXXFLAGS) test.cpp -o run_tests
 	./run_tests
 
 clean:
-	rm -rf wordrank run_tests data_test
+	rm -rf wordrank run_tests data_test data
