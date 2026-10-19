@@ -1,0 +1,13 @@
+name: Build and Test
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: make
+      - name: Run tests
+        run: make test
+      - name: Demo run
+        run: printf '1\nleetcode\n2\nabcd\n3\ndcba\n5\nabcd\n0\n' | ./wordrank
